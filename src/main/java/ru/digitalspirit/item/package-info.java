@@ -1,4 +1,4 @@
-package ru.digitalspirit.equipment;
+package ru.digitalspirit.item;
 /*
  *   FUTURE TODO
  *
