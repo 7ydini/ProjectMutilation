@@ -1,6 +1,6 @@
 package ru.digitalspirit.unit;
 
-import ru.digitalspirit.map.field.square.model.Cell;
+import ru.digitalspirit.map.field.Node.model.Cell;
 import ru.digitalspirit.unit.characteristics.AttributeTypeEnum;
 
 import java.util.Map;
