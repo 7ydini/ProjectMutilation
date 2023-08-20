@@ -2,9 +2,7 @@ package ru.digitalspirit.item.equipment;
 
 import ru.digitalspirit.item.Item;
 import ru.digitalspirit.item.ItemInterface;
-import ru.digitalspirit.unit.characteristics.AttackTypeEnum;
-import ru.digitalspirit.unit.characteristics.AttributeTypeEnum;
-import ru.digitalspirit.unit.characteristics.DefenceTypeEnum;
+import ru.digitalspirit.character.characteristics.AttributeTypeEnum;
 
 import java.util.Map;
 

@@ -1,16 +1,16 @@
-package ru.digitalspirit.unit;
+package ru.digitalspirit.character;
 
 import ru.digitalspirit.ability.AbilityInterface;
 import ru.digitalspirit.map.field.Node.model.Cell;
-import ru.digitalspirit.unit.characteristics.AttributeTypeEnum;
+import ru.digitalspirit.character.characteristics.AttributeTypeEnum;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public abstract class Unit implements UnitInterface{
-    protected Cell unitLocation;
-    protected String unitName;
+public abstract class Character implements CharacterInterface {
+    protected Cell characterLocation;
+    protected String characterName;
     protected Boolean alive;
 
     protected Double remainingHealthPoints;
@@ -26,18 +26,18 @@ public abstract class Unit implements UnitInterface{
 
     //protected List<> unitStatus;
     //protected List<> unitPassiveSkills;
-    protected List<AbilityInterface> unitAbility;
+    protected List<AbilityInterface> characterAbility;
 
     public Boolean getAlive() {
         return alive;
     }
 
-    public Cell getUnitLocation() {
-        return unitLocation;
+    public Cell getCharacterLocation() {
+        return characterLocation;
     }
 
-    public String getUnitName() {
-        return unitName;
+    public String getCharacterName() {
+        return characterName;
     }
 
     public Double getRemainingHealthPoints() {
@@ -72,13 +72,13 @@ public abstract class Unit implements UnitInterface{
         return attributeMap;
     }
 
-    public List<AbilityInterface> getUnitAbility() {
-        return unitAbility;
+    public List<AbilityInterface> getCharacterAbility() {
+        return characterAbility;
     }
 
     public List<AbilityInterface> getPossibleAbilityToUse() { ///////////// Возможно нужно выдавать некий индификатор или вынести использовние и проверки вне песонажа(что будет странно);
         List<AbilityInterface> possibleAbility = new ArrayList<>();
-        for(AbilityInterface ability: unitAbility){
+        for(AbilityInterface ability: characterAbility){
             if(ability.checkAbilityUsage(this)){
                 possibleAbility.add(ability);
             }
@@ -86,14 +86,12 @@ public abstract class Unit implements UnitInterface{
         return possibleAbility;
     }
 
-    
-
-    protected void setUnitLocation(Cell unitLocation) {
-        this.unitLocation = unitLocation;
+    protected void setCharacterLocation(Cell unitLocation) {
+        this.characterLocation = unitLocation;
     }
 
-    protected void setUnitName(String unitName) {
-        this.unitName = unitName;
+    protected void setCharacterName(String unitName) {
+        this.characterName = unitName;
     }
 
     protected void setAlive(Boolean alive) {
@@ -132,7 +130,7 @@ public abstract class Unit implements UnitInterface{
         this.attributeMap = attributeMap;
     }
 
-    protected void setUnitAbility(List<AbilityInterface> unitAbility) {
-        this.unitAbility = unitAbility;
+    protected void setCharacterAbility(List<AbilityInterface> characterAbility) {
+        this.characterAbility = characterAbility;
     }
 }

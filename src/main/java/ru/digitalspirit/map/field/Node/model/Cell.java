@@ -1,7 +1,7 @@
 package ru.digitalspirit.map.field.Node.model;
 
 import ru.digitalspirit.map.field.Node.Node;
-import ru.digitalspirit.unit.Unit;
+import ru.digitalspirit.character.Character;
 
 import java.util.*;
 
@@ -10,7 +10,7 @@ public class Cell extends Node {
     private LinkedHashSet<Edge> edges;
 
 
-    public Cell(Integer id, LinkedHashSet<Edge> edges, Boolean occupied, Unit unit) {
+    public Cell(Integer id, LinkedHashSet<Edge> edges, Boolean occupied, Character unit) {
         this.id = id;
         this.edges = edges;
         this.occupied = occupied;

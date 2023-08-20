@@ -1,8 +1,7 @@
 package ru.digitalspirit.item.equipment.armor;
 
-import ru.digitalspirit.item.Item;
 import ru.digitalspirit.item.equipment.Equipment;
-import ru.digitalspirit.unit.characteristics.DefenceTypeEnum;
+import ru.digitalspirit.character.characteristics.DefenceTypeEnum;
 
 import java.util.Map;
 

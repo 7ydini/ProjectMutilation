@@ -1,15 +1,15 @@
-package ru.digitalspirit.unit.playerCharacter;
+package ru.digitalspirit.character.player;
 
 import ru.digitalspirit.item.ItemInterface;
 import ru.digitalspirit.item.equipment.Equipment;
-import ru.digitalspirit.unit.Unit;
-import ru.digitalspirit.unit.UnitInterface;
-import ru.digitalspirit.unit.characteristics.AttributeTypeEnum;
+import ru.digitalspirit.character.Character;
+import ru.digitalspirit.character.CharacterInterface;
+import ru.digitalspirit.character.characteristics.AttributeTypeEnum;
 
 import java.util.List;
 import java.util.Map;
 
-public class PlayerCharacter extends Unit implements UnitInterface {
+public class PlayerCharacter extends Character implements CharacterInterface {
     private Integer nextLevelPoints;
     private Integer levelPoints;
     private Integer freePoints;

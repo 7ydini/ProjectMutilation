@@ -1,13 +1,13 @@
-package ru.digitalspirit.unit.nonPlayerCharacter;
+package ru.digitalspirit.character.nonplayer;
 
-import ru.digitalspirit.unit.Unit;
-import ru.digitalspirit.unit.UnitInterface;
-import ru.digitalspirit.unit.characteristics.AttackTypeEnum;
-import ru.digitalspirit.unit.characteristics.DefenceTypeEnum;
+import ru.digitalspirit.character.Character;
+import ru.digitalspirit.character.CharacterInterface;
+import ru.digitalspirit.character.characteristics.AttackTypeEnum;
+import ru.digitalspirit.character.characteristics.DefenceTypeEnum;
 
 import java.util.Map;
 
-public class NonPlayerCharacter extends Unit implements UnitInterface {
+public class NonPlayerCharacter extends Character implements CharacterInterface {
     private Integer rewardLevelPoints;
 
     private NonPlayerCharacterType nonPlayerCharacterType;

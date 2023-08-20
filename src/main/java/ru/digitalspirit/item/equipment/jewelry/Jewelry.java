@@ -1,7 +1,7 @@
 package ru.digitalspirit.item.equipment.jewelry;
 
 import ru.digitalspirit.item.equipment.Equipment;
-import ru.digitalspirit.unit.characteristics.AttributeTypeEnum;
+import ru.digitalspirit.character.characteristics.AttributeTypeEnum;
 
 import java.util.Map;
 
