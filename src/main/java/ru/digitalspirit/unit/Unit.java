@@ -1,11 +1,14 @@
 package ru.digitalspirit.unit;
 
+import ru.digitalspirit.ability.AbilityInterface;
 import ru.digitalspirit.map.field.Node.model.Cell;
 import ru.digitalspirit.unit.characteristics.AttributeTypeEnum;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
-public abstract class Unit {
+public abstract class Unit implements UnitInterface{
     protected Cell unitLocation;
     protected String unitName;
     protected Boolean alive;
@@ -23,7 +26,7 @@ public abstract class Unit {
 
     //protected List<> unitStatus;
     //protected List<> unitPassiveSkills;
-    //protected List<> unitSkills;
+    protected List<AbilityInterface> unitAbility;
 
     public Boolean getAlive() {
         return alive;
@@ -66,8 +69,24 @@ public abstract class Unit {
     }
 
     public Map<AttributeTypeEnum, Integer> getAttributeMap() {
-        return AttributeMap;
+        return attributeMap;
     }
+
+    public List<AbilityInterface> getUnitAbility() {
+        return unitAbility;
+    }
+
+    public List<AbilityInterface> getPossibleAbilityToUse() { ///////////// Возможно нужно выдавать некий индификатор или вынести использовние и проверки вне песонажа(что будет странно);
+        List<AbilityInterface> possibleAbility = new ArrayList<>();
+        for(AbilityInterface ability: unitAbility){
+            if(ability.checkAbilityUsage(this)){
+                possibleAbility.add(ability);
+            }
+        }
+        return possibleAbility;
+    }
+
+    
 
     protected void setUnitLocation(Cell unitLocation) {
         this.unitLocation = unitLocation;
@@ -110,6 +129,10 @@ public abstract class Unit {
     }
 
     protected void setAttributeMap(Map<AttributeTypeEnum, Integer> attributeMap) {
-        AttributeMap = attributeMap;
+        this.attributeMap = attributeMap;
+    }
+
+    protected void setUnitAbility(List<AbilityInterface> unitAbility) {
+        this.unitAbility = unitAbility;
     }
 }

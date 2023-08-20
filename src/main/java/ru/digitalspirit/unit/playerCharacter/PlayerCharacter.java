@@ -1,4 +1,4 @@
-package ru.digitalspirit.unit.hero;
+package ru.digitalspirit.unit.playerCharacter;
 
 import ru.digitalspirit.item.ItemInterface;
 import ru.digitalspirit.item.equipment.Equipment;
@@ -9,7 +9,7 @@ import ru.digitalspirit.unit.characteristics.AttributeTypeEnum;
 import java.util.List;
 import java.util.Map;
 
-public class Hero extends Unit implements UnitInterface {
+public class PlayerCharacter extends Unit implements UnitInterface {
     private Integer nextLevelPoints;
     private Integer levelPoints;
     private Integer freePoints;

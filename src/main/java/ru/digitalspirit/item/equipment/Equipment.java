@@ -8,9 +8,8 @@ import ru.digitalspirit.unit.characteristics.DefenceTypeEnum;
 
 import java.util.Map;
 
-public class Equipment extends Item implements ItemInterface {
-    private Map<AttackTypeEnum,Double> AttackMap;
-    private Map<DefenceTypeEnum,Double> DefenceMap;
-    private Map<AttributeTypeEnum,Integer> AttributeMap;
+public abstract class Equipment extends Item implements ItemInterface {
+    private Map<AttributeTypeEnum,Integer> RequiredAttributeMap;
+    private Integer RequiredLevel;
     private EquipmentTypeEnum equipmentType;
 }
